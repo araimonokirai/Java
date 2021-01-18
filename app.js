@@ -4,7 +4,7 @@ var user_hand = prompt('じゃんけんの手をグー、チョキ、パーか�
 
  var judge = winlose(user_hand, js_hand);
 
- alert('あなたの選んだ手は' + user_hand + 'です');
+ alert('あなたの選んだ手は' + user_hand + 'です。 \nJavaScriptの選んだ手は' + js_hand + 'です。\n結果は' + judge + 'です。');
 
  function getJShand() {
    var js_hand_num = Math.floor( Math.random() * 3);
@@ -16,7 +16,7 @@ var user_hand = prompt('じゃんけんの手をグー、チョキ、パーか�
    } else if(js_hand_num == 2){
      hand_name = "パー";
    }
-   return hand_name; 
+   return hand_name;
  }
 
  function winlose(user,js){
@@ -32,21 +32,21 @@ var user_hand = prompt('じゃんけんの手をグー、チョキ、パーか�
      }
    }  else if(user == "チョキ"){
     if(js == "グー"){
-      winLoseStr = "負け";
+      winloseStr = "負け";
     } else if(js == "チョキ"){
-      winLoseStr = "あいこ";
+      winloseStr = "あいこ";
     } else if(js == "パー"){
-      winLoseStr = "勝ち";
+      winloseStr = "勝ち";
     }
   } else if(user == "パー"){
     if(js == "グー"){
-      winLoseStr = "勝ち";
+      winloseStr = "勝ち";
     } else if(js == "チョキ"){
-      winLoseStr = "負け";
+      winloseStr = "負け";
     } else if(js == "パー"){
-      winLoseStr = "あいこ";
+      winloseStr = "あいこ";
     }
   }
 
-  return winLoseStr;
+  return winloseStr;
  }
